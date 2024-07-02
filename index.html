@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Text to Speech App</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Text to Speech App</h1>
+    </header>
+      <article class="input">
+        <h2 class="input-title">Convert your text to speech</h2>
+        <div>
+          <textarea class="text-cls" placeholder="Enter text..."></textarea>
+        </div>
+        <div>
+          <button class="btn" onclick="speak()" >Speak</button>
+        </div>
+      </article>
+    </div>
+  </div>
+  <script>
+    var speech = new SpeechSynthesisUtterance();
+  
+    function speak()
+    {
+      speech.text = textToSpeech.value;
+      speech.volume = 1;
+      speech.rate = 1;
+      speech.pitch = 1;
+      window.speechSynthesis.speak(speech)
+    }
+  
+  </script>
+         
+</body>
+
+
+
+
+</html>
